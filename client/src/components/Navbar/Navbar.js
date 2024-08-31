@@ -38,17 +38,6 @@ const Navbar = () => {
         navigate('/auth');
     };
 
-    useEffect(() => {
-        const token = user?.token;
-    
-        if (token) {
-          const decodedToken = decodeToken(token);
-    
-          if (decodedToken.exp * 1000 < new Date().getTime()) logout();
-        }
-    
-        setUser(JSON.parse(localStorage.getItem('profile')));
-      }, [location]);
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
