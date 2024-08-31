@@ -19,6 +19,10 @@ export default makeStyles({
     justifyContent: 'space-between',
     height: '100%',
     position: 'relative',
+    background: 'rgb(38,29,98)',
+    background: 'linear-gradient(0deg, rgba(38,29,98,1) 0%, rgba(25,34,165,1) 100%)',
+    boxShadow: '0 16px 32px rgba(0, 0, 0, 0.15)', // Shadow similar to form
+    overflow: 'hidden', // To ensure content doesn't overflow the card
   },
   overlay: {
     position: 'absolute',
@@ -42,6 +46,7 @@ export default makeStyles({
   },
   title: {
     padding: '0 16px',
+    color: 'white', // Ensure the title is visible against the transparent background
   },
   cardActions: {
     padding: '0 16px 8px 16px',
