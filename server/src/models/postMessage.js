@@ -9,6 +9,9 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    name: {
+        type: String
+    },
     creator: {
         type: String,
         required: true
@@ -20,9 +23,9 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    like: {
-        type: Number,
-        default: 0
+    likes: {
+        type: [String],
+        default: []
     },
     createdAt: {
         type: Date,
